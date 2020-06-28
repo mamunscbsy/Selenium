@@ -9,7 +9,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class LearnFrame {
 	
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InterruptedException {
 		
 		System.setProperty("webdriver.chrome.driver", "C:\\Users\\mamun\\Selenium\\Selenium\\drivers\\chromedriver.exe");
 		ChromeDriver driver = new ChromeDriver(); // For Chrome
@@ -20,16 +20,18 @@ public class LearnFrame {
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		
 		//Switching to frame - way 1 //if your iframe has Id or name locator put the 'Value' directly
-//		driver.switchTo().frame("sidebar"); //for id or name locator only(put the id or name locator "value")
+		//driver.switchTo().frame("sidebar"); //for id or name Attribute only(put the id or name Attribute "value")
 		
 		//Using index number- if your iframe has no Id or Name locator then go to Index number
 		//Switching to frame - way 2
 		//driver.switchTo().frame(0); // using index number - (Note: in java index starts from Zero[0])
 		
-		//WebElement- if there are multiple index then we go for webelement
+		//WebElement- if there are multiple index then we go for WebElement
 		//Switching to frame - way 3
 		//WebElement eleFrame = driver.findElementByClassName("demo-frame");
 		//driver.switchTo().frame(eleFrame);
+		
+		
 		
 		driver.switchTo().frame(driver.findElementByClassName("demo-frame")); //Select WebElement by CalssName
 		
@@ -39,16 +41,16 @@ public class LearnFrame {
 		//for switch back to main HTML page from frame
 		driver.switchTo().defaultContent();
 		
-		//after back to main html select any element from outside Nested HTML
+		//after back to main Html select any element from outside Nested HTML
 		driver.findElementByLinkText("Download").click();
-		
+		Thread.sleep(3000);
 		driver.findElementByXPath("//*[@id=\'menu-top\']/li[3]/a").click();
 		driver.findElementByXPath("//*[@id=\'menu-top\']/li[4]/a").click();
 		driver.findElementByXPath("//*[@id=\'menu-top\']/li[5]/a").click();
 		driver.findElementByXPath("//*[@id=\'menu-top\']/li[6]/a").click();
 		driver.findElementByXPath("//*[@id=\'menu-top\']/li[7]/a").click();
 		driver.findElementByXPath("//*[@id=\'menu-top\']/li[8]/a").click();
-		
+		Thread.sleep(5000);
 		driver.close();
 
 		

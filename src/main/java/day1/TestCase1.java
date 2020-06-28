@@ -2,9 +2,9 @@ package day1;
 
 import org.testng.annotations.Test;
 
-import wrapper.GenericWrapper;
+import wrapper.GenericWrapper01;
 
-public class TestCase1 extends GenericWrapper {
+public class TestCase1 extends GenericWrapper01 {
 	
 	@Test
 	public void login() {

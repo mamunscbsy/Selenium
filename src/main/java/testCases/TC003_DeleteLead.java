@@ -2,9 +2,9 @@ package testCases;
 
 import org.testng.annotations.Test;
 
-import wrapper.GenericWrapper;
+import wrapper.GenericWrapper01;
 
-public class TC003_DeleteLead extends GenericWrapper{
+public class TC003_DeleteLead extends GenericWrapper01{
 	
 	@Test
 	public void deletelead() {

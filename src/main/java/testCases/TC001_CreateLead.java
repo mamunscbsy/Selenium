@@ -5,11 +5,11 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
-import wrapper.GenericWrapper;
+import wrapper.GenericWrapper01;
 
 
 
-public class TC001_CreateLead extends GenericWrapper {
+public class TC001_CreateLead extends GenericWrapper01 {
 	
 	@Test
 	public void createLead() throws InterruptedException {
@@ -55,7 +55,7 @@ public class TC001_CreateLead extends GenericWrapper {
 		selectByVisibleTextById("createLeadForm_marketingCampaignId", "Automobile");
 		enterByXpath("//input[@id='createLeadForm_primaryPhoneNumber']", "683-207-4149");
 		enterByXpath("//input[@id='createLeadForm_primaryEmail']", "arc@gmail.com");
-		clickByXpath("//a[@href='/crmsfa/control/createLeadForm']");
+		clickByXpath("//input[@name='submitButton']");
 		
 		
 		

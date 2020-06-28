@@ -4,6 +4,8 @@ import java.util.Arrays;
 
 public class Loops {
 	
+	 static String x = "Mamun";
+	
 	
 	//1. for iterator ---> based on index
 	//2. for each ---> based on items
@@ -12,6 +14,8 @@ public class Loops {
 	
 	
 	public static void main(String[] args) {
+		
+		System.out.println("x");
 		
 		// for iterator
 		// syntax for "for iterator"

@@ -20,7 +20,7 @@ public class Acme_Test {
 		
 		driver.manage().window().maximize();
 		
-		//driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		
 		driver.findElementByXPath("//input[@id='email']").sendKeys("kumar.testleaf@gmail.com");
 		
@@ -40,8 +40,10 @@ public class Acme_Test {
 		
 		driver.findElementByXPath("//button[text()='Search']").click();
 		
-		//
+		//didn't perform "find the country name based on the vendor"
 		
+		driver.findElementByXPath("//a[text()='Log Out']").click();
+						
 		driver.close();
 		
 		

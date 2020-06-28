@@ -8,7 +8,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class LearnFrameAlerts {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InterruptedException {
 
 
 		System.setProperty("webdriver.chrome.driver", "C:\\Users\\mamun\\Selenium\\Selenium\\drivers\\chromedriver.exe");
@@ -25,14 +25,16 @@ public class LearnFrameAlerts {
 		
 		driver.findElement(By.xpath("//button[text()='Try it']")).click();
 		
-		String txt = "name";
+		//String txt = "name";
 		
+		Thread.sleep(3000);
 		String text = driver.switchTo().alert().getText(); //for read the text from alert
-		System.out.println("text"); // print the text in console
+		System.out.println(text); // print the text in console
 		
-		//driver.switchTo().alert().accept(); // click ok button from alert
+		//Thread.sleep(3000);
+		driver.switchTo().alert().accept(); // click ok button from alert
 		
-		driver.switchTo().alert().dismiss(); //// click cancel button from alert
+		//driver.switchTo().alert().dismiss(); //// click cancel button from alert
 		
 		
 		

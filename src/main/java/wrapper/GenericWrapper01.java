@@ -10,7 +10,7 @@ import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.Select;
 
-public class GenericWrapper {
+public class GenericWrapper01{
 
 	public RemoteWebDriver driver;
 
@@ -80,10 +80,7 @@ public class GenericWrapper {
 		driver.findElementByXPath(loc).sendKeys(value);
 		System.out.println("The date "+value+" is entered successfuly");
 	}
-	//public void enterBy(String loc, String value) {
-	//driver.findElementByXPath(value);
-	//System.out.println("The date "+value+" is entered successfully");
-	//}
+	
 	//Enter the value by class locator
 	public void enterByClass(String loc, String value) {
 		driver.findElementByClassName(loc).sendKeys(value);
@@ -91,12 +88,6 @@ public class GenericWrapper {
 
 	}
 	
-
-	//public void clickByLinkText1(String loc) {
-	//driver.findElementByLinkText(loc).click();
-	//System.out.println("The Element clicked successfully");
-	//}
-
 	//enter the element by ID locator
 	public void enetrById(String loc, String value) {
 		driver.findElementById(loc).sendKeys(value);
@@ -114,7 +105,8 @@ public class GenericWrapper {
 		driver.findElementByXPath(loc).click();
 		System.out.println("The element clicked successfully");
 	}
-	//Dropdown by using Id locator (visible text)
+	//DropDown
+	//By using Id locator (SelectByVisibleText)
 	public void selectByVisibleTextById(String id, String value) {
 		WebElement ele = driver.findElementById(id);
 		Select dd =new Select(ele);
@@ -122,17 +114,21 @@ public class GenericWrapper {
 		System.out.println("Done");
 	}
 
-
+	//By using Id locator (selectByValue)
 	public void selectByValueById(String id, String value) {
 		WebElement ele = driver.findElementById(id);
 		Select dd =new Select(ele);
 		dd.selectByValue(value);	
 	}
+	
+	//By using Id locator (selectByIndex)
 	public void selectIndexById(String id, int value) {
 		WebElement ele = driver.findElementById(id);
 		Select dd =new Select(ele);
 		dd.selectByIndex(value);
 	}
+	
+	//By using Name locator (SelectByVisibleText)
 	public void selectByVisibleTextByName(String name, String value) {
 		WebElement ele = driver.findElementById(name);
 		Select dd =new Select(ele);
@@ -140,17 +136,18 @@ public class GenericWrapper {
 		System.out.println("Done");
 	}
 	
+	//By using Name locator (selectByValue)
 	public void selectByValueByName(String name, String value) {
 		WebElement ele = driver.findElementById(name);
 		Select dd =new Select(ele);
 		dd.selectByValue(value);
 	}
+	
+	//By using Name locator (selectByIndex)
 	public void selectIndexByName(String name, int value) {
 		WebElement ele = driver.findElementById(name);
 		Select dd =new Select(ele);
 		dd.selectByIndex(value);
 	}
-	
-	
-	
+		
 } 

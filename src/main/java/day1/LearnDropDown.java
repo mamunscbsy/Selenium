@@ -1,7 +1,9 @@
 package day1;
 
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.Select;
 
 public class LearnDropDown {
@@ -11,12 +13,17 @@ public static void main(String[] args) {
 		// Launch Browser
 		System.setProperty("webdriver.chrome.driver", "C:\\Users\\mamun\\Selenium\\Selenium\\drivers\\chromedriver.exe");
 		ChromeDriver driver = new ChromeDriver();
+		  
+	//System.setProperty("webdriver.gecko.driver", "C:\\Users\\mamun\\Selenium\\Selenium\\drivers\\geckodriver.exe");
+	//FirefoxDriver driver = new FirefoxDriver();
 		
 		//maximize
 		driver.manage().window().maximize();
 		
 		//load URL
 		driver.get("http://leaftaps.com/opentaps");
+		
+		System.out.println(driver.getTitle());
 		
 		//Enter Username - (Element level)
 		driver.findElementById("username").sendKeys("DemoSalesManager");
@@ -35,27 +42,27 @@ public static void main(String[] args) {
 	
 		//Select class for Dropdown (how to handle with dropdown)
 		
-		// 1. identify the dropdown element nd pass to select class
+		// 1. identify the dropdown element and pass to select class
 		
-		WebElement source = driver.findElementById("createLeadForm_dataSourceId");	
-		Select dd = new Select(source);					
+		WebElement Source = driver.findElementById("createLeadForm_dataSourceId");
+		Select dd = new Select(Source);
+		//dd.selectByVisibleText("Employee"); //use-way1
+		//dd.selectByValue("LEAD_CONFERENCE");//use-way2
+		dd.selectByIndex(3);
+		
+		
 		
 		// 2. select specific value from that select dropdown element
 		
 		// choosing value from dropdown - 3 options
 	
-		dd.selectByVisibleText("Other");			// Way 1 
+		// dd.selectByVisibletext("Other");			// Way 1 
 		// dd.selectByValue("LEAD_COLDCALL");		// Way 2
 		// dd.selectByIndex(2);						// Way 3
 		
 		//close Browser
-		driver.close();
-		
-		
-		
-		
-		
+		//driver.close();
+			
 	}
-
 
 }

@@ -13,7 +13,7 @@ public class LearnAlerts {
 		
 		
 		//driver.get("https://www.irctc.co.in/eticketing/loginHome.jsf");// It's not working right now
-		
+		//enter url
 		driver.get("http://leaftaps.com/opentaps");
 		
 		driver.manage().window().maximize();
@@ -38,32 +38,21 @@ public class LearnAlerts {
 		
 		driver.findElementByXPath("//a[text()='Merge']").click();
 		
-		String text = driver.switchTo().alert().getText();
+		//switching to alert and capturing alert message
+		 String alertMessage = driver.switchTo().alert().getText();
 		
-		System.out.println(text);
+		 Thread.sleep(3000);
+		//Displaying alert message
+		System.out.println(alertMessage);
 		
+		Thread.sleep(3000);
+		//Accepting alert
 		driver.switchTo().alert().accept();
+		//driver.switchTo().alert().dismiss();
 		
-		driver.close();
+	
 		
-		
-		//driver.findElementByXPath("//input[@value='Login']").click();
-		
-		Thread.sleep(2000);
-		
-		//String txt = "name";
-		
-		//String text = driver.switchTo().alert().getText(); // read the text from alert
-		
-		//System.out.println(text);// print the text in console
-		
-		//driver.switchTo().alert().accept(); // click ok button from alert
-		
-//		driver.switchTo().alert().dismiss(); // click cancel button from alert
-		
-		
-		
-
+				
 	}
 
 }

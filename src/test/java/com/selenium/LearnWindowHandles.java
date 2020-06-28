@@ -9,7 +9,8 @@ public class LearnWindowHandles {
 
 	public static void main(String[] args) {
 		
-		System.setProperty("webdriver.chrome.driver", "C:\\Users\\mamun\\Selenium\\Selenium\\drivers\\chromedriver.exe");
+		//C:\Users\mamun\Selenium\Selenium\Drivers
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\mamun\\Selenium\\Selenium\\Drivers\\chromedriver.exe");
 		ChromeDriver driver = new ChromeDriver();
 		
 		driver.get("https://www.irctc.co.in");
@@ -43,8 +44,11 @@ public class LearnWindowHandles {
 		   for(String eachWin:allWin) { 
 			   
 		   //System.out.println(eachWin);   
-		   driver.switchTo().window(eachWin);	// Switching window	
+		   driver.switchTo().window(eachWin);	// Switching to child/new window	
 		   System.out.println(driver.getTitle());
+		   
+		   driver.close(); // closing the child/new window
+		   driver.switchTo().window(eachWin);	//switch back to parent/primary window
 		   
 		   }
 			
