@@ -1,4 +1,4 @@
-package day1;
+package day1_DropDown;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -16,9 +16,9 @@ public class TC002_login {
 		
 		driver.findElementById("email").sendKeys("mamunurrob@gmail.com");
 		
-		driver.findElement(By.id("email")).sendKeys("sdfad");
+		driver.findElement(By.id("pass")).sendKeys("sdfad");
 		
-		driver.findElementById("password").sendKeys("720971");
+		driver.findElementByXPath("//input[@value='Log In']").sendKeys("720971");
 		
 		driver.manage().window().maximize();
 		

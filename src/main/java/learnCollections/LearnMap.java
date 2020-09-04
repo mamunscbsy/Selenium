@@ -1,62 +1,75 @@
 package learnCollections;
 
-import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Map.Entry;
-import java.util.TreeMap;
 
 public class LearnMap {
 
 	public static void main(String[] args) {
 
-          Map<String, Integer> mp = new TreeMap<String, Integer>();// Result order depends on Implementation classes
-          mp.put("Haque", 571);
-          mp.put("Rob", 682);
-          mp.put("Ali", 347);
-          mp.put("abc", 123);
-          mp.put("Ali", 444);
-          mp.put("Gopi", 222);
-          
-          for(Entry<String, Integer> eachMp : mp.entrySet()) {
-        	  System.out.println(eachMp.getKey() + "   " + eachMp.getValue());
+		Map<String, Integer> mp = new LinkedHashMap<String, Integer>();
+          //Map<String, Integer> mp = new LinkedHashMap<String, Integer>();// Result order depends on Implementation classes
+         
+          mp.put("Doha", 123);
+          mp.put("Zia", 682);
+          mp.put("Mizan", 347);
+          mp.put("Abc", 123);
+          mp.put("Mizan", 444);
+          mp.put("Hasnath", 222);
+          mp.put("Nasir", 555);
+          mp.put("Rumman", 007);
+       
+         for(Entry<String, Integer> eachMp : mp.entrySet()) {
+        	  System.out.println(eachMp.getKey() + "    " + eachMp.getValue());
           }
-          //size()
-          //System.out.println(mp.size());
+        
+                          
+          // get count of Map entry -size()
+         System.out.println(mp.size());
           
-          System.out.println(".........................");
+        
+         System.out.println(".........................");
           
           //get();
-          System.out.println(mp.get("Ali"));
+        System.out.println(mp.get("Mizan"));
           
           //Remove()
-         mp.remove("Gopi"); // just pass the Key
+        // mp.remove("Hasnath"); // just pass the Key
           
-          System.out.println(".........................");
+         
+         System.out.println(".........................");
           
           //after remove Size of Map items
-          System.out.println(mp.size());
+        System.out.println(mp.size());
           
-          System.out.println(".........................");
+          //System.out.println(".........................");
           
           //ContainsKey()-Search by the Key
-          System.out.println(mp.containsKey("Mamun")); //true/false
+         System.out.println(mp.containsKey("Mamun")); //true/false
           
           System.out.println(".........................");
           
           //ContainsValue- Search by Value
-          System.out.println(mp.containsValue(347)); //true/false
+         System.out.println(mp.containsValue(347)); //true/false
           
           //clear();
-          mp.clear(); //Removes all Map data/items
+         //mp.clear(); //Removes all Map data/entry
           
           System.out.println(".........................");
           
-          System.out.println(mp.size());// true/false
+         System.out.println(mp.size());// true/false
           
-          System.out.println(".........................");
+          //System.out.println(".........................");
           
           System.out.println(mp.isEmpty());
+        
+          System.out.println(".........................");
+          
+          for(Entry<String, Integer> eachMp : mp.entrySet()) {
+        	  System.out.println(eachMp.getKey() + "    " + eachMp.getValue());
+          }
+          
           
          // for Each loop (Single dimension-List & Set)
           

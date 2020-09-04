@@ -17,7 +17,7 @@ public class WhileLoop {
 		}
 		
 		String[] obj = new String[4];
-		obj[0] = "yousuf";
+		obj[0] = "Rumman";
 		obj[1] = "shihab";
 		obj[2] = "Mamun";
 		obj[3] = "xyz";

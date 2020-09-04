@@ -10,7 +10,7 @@ public class ConfirmationAlert {
 	public static void main(String[] args) throws InterruptedException {
 		System.setProperty("webdriver.chrome.driver",
 				"C:\\Users\\mamun\\Selenium\\Selenium\\drivers\\chromedriver.exe");
-		ChromeDriver driver = new ChromeDriver(); // For Chrome
+		ChromeDriver driver = new ChromeDriver(); 
 
 		//driver.get("https://www.irctc.co.in/eticketing/loginHome.jsf");// It's not working right now
 
@@ -39,6 +39,17 @@ public class ConfirmationAlert {
 		driver.findElementByXPath("//a[text()='Merge']").click();
 
 		//switching to alert and capturing alert message
+				
+		Alert confirmationAlert = driver.switchTo().alert();
+		System.out.println(confirmationAlert.getText());
+		//Alert ConfirmationAlert = driver.switchTo().alert();
+		//System.out.println(ConfirmationAlert.getText());
+		
+		Thread.sleep(3000);
+		confirmationAlert.dismiss();
+		//confirmationAlert.accept();
+
+		
 		/*String alertMessage = driver.switchTo().alert().getText();
 
 		Thread.sleep(3000);
@@ -49,12 +60,6 @@ public class ConfirmationAlert {
 		//Accepting alert
 		driver.switchTo().alert().accept();
 		//driver.switchTo().alert().dismiss();*/
-		
-		Alert ConfirmationAlert = driver.switchTo().alert();
-		System.out.println(ConfirmationAlert.getText());
-		Thread.sleep(3000);
-		ConfirmationAlert.accept();
-
 	}
 
 }

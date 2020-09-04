@@ -10,7 +10,7 @@ public class DoWhileLoop {
 		increment;
 		}while(condition);*/
 
-		int i=51;
+		int i=1;
 		do {
 			System.out.println(i);
 			i++;

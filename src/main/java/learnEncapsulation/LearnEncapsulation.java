@@ -2,9 +2,10 @@ package learnEncapsulation;
 
 public class LearnEncapsulation {
 	
+	//Declare the pin as private
 	private  int pin = 1234;
 	
-	public int ph = 12345678;
+	public int atm = 213121242;
 	
 	
 	public int getdata() {	//getter method
@@ -12,7 +13,7 @@ public class LearnEncapsulation {
 	}
 	
 	
-	public void setPin(int pinNum) {
+	public void setPin(int pinNum) { //setter method
 		this.pin = pinNum;
 	}
 	

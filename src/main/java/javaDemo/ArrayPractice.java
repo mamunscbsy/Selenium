@@ -40,22 +40,25 @@ public class ArrayPractice {
 				
 				//String [] name = {"Touhid","Ashraf","WXYZ","Doha"};
 				
-				int[] ph = {123, 456, 789, 1 ,2 ,3 ,4};	
+				int[] ph = {68220840, 4565555, 7895555, 1 ,2 ,3 ,4};	
 				
 				char[] ch1 = {'a', 'b', 'c', 'd'};
 				
 				short[] id = {1,2,3,4};
 				
-				System.out.println(names[0]);
+				/*System.out.println(names[0]);
 				System.out.println(ph[6]);
 				System.out.println(ch1[1]);
 				System.out.println(id[2]);
-				System.out.println(names.length);
+				System.out.println(names.length);*/
 
 				// Second way		
 				//ClassName obj = new ClassName();
 				
 				String[] obj = new String[4];
+				
+				//String[][] obj = new String[2][3];
+				
 				obj[0] = "Touhid";
 				obj[1] = "Ashraf";
 				obj[2] = "WXYZ";
@@ -63,12 +66,12 @@ public class ArrayPractice {
 				//obj[4] = "abc"; //try to write 5th Arrays through an exception
 								
 				//2. How to pick value from Array ---> array[indexNumber]		
-				System.out.println(obj[2]);
+				//System.out.println(obj[2]);
 				
 				//3. how to get count of Array ---> array.lenght
 				System.out.println(obj.length);
 				
-				//for loop
+				//4. Print all value from Arrays use -for loop
 				for(int i= 0 ; i <= 3; i++) {			
 					System.out.println(obj[i]);
 				}

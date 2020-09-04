@@ -1,4 +1,4 @@
-package day4;
+package day4_Frame;
 
 import java.awt.List;
 import java.util.concurrent.TimeUnit;
@@ -23,8 +23,9 @@ public class LearnFrame {
 		//driver.switchTo().frame("sidebar"); //for id or name Attribute only(put the id or name Attribute "value")
 		
 		//Using index number- if your iframe has no Id or Name locator then go to Index number
+		
 		//Switching to frame - way 2
-		//driver.switchTo().frame(0); // using index number - (Note: in java index starts from Zero[0])
+		driver.switchTo().frame(0); // using index number - (Note: in java index starts from Zero[0])
 		
 		//WebElement- if there are multiple index then we go for WebElement
 		//Switching to frame - way 3
@@ -33,7 +34,7 @@ public class LearnFrame {
 		
 		
 		
-		driver.switchTo().frame(driver.findElementByClassName("demo-frame")); //Select WebElement by CalssName
+		//driver.switchTo().frame(driver.findElementByClassName("demo-frame")); //Select WebElement by CalssName
 		
 		driver.findElementByXPath("//ol[@id='selectable']/li[1]").click(); //clicking Item 1 element 
 		

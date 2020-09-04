@@ -6,15 +6,18 @@ public class IfElseIf {
 
 		
 		
-		int D = 6;
+		int D = 9;
 		
 		if(D > 7) {
 			System.out.println("Diabetic");
 		
 		}else if(D < 5){
 			System.out.println("Non Diabetic");
+		}else if(D> 8){
+			System.out.println("Poor Control");
+		}
 		
-		}else {
+		else {
 			System.out.println("Pre Diabetic");
 		}
 		

@@ -16,11 +16,11 @@ public class TestNGAnnotations {
 	public void beforSuit() {
 		System.out.println("BeforeSuit");
 	}
-
 	@BeforeTest
 	public void beforeTest() {
 		System.out.println("beforeTest");
 	}
+		
 	@BeforeClass
 	public void beforeClass() {
 		System.out.println("beforeClass");
@@ -33,13 +33,18 @@ public class TestNGAnnotations {
 	
 	@Test
 	public void test1() {
-		System.out.println("test1");
+		System.out.println("Execute test1");
+	}
+
+	@Test
+	public void test2() {
+		System.out.println("Execute test2");
+		
 	}
 	
 	@Test
-	public void test2() {
-		System.out.println("test2");
-		
+	public void test3() {
+		System.out.println("Execute test3");
 	}
 	
 	@AfterMethod
@@ -58,7 +63,7 @@ public class TestNGAnnotations {
 	}
 	
 	@AfterSuite
-	public void afterSuit() {
+	public void afterSuite() {
 		System.out.println("afterSuit");
 	}
 }

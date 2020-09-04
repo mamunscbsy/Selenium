@@ -55,12 +55,13 @@ public class EditLead {
 		//WebDriverWait wait = new WebDriverWait(driver, 20);
 		//wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//div[@class='x-grid3-cell-inner x-grid3-col-partyId']/a)[1]")));
 			
-		
+		Thread.sleep(2000);
 		//click on first resulting lead
-		String LeadId = driver.findElementByXPath("(//a[@href='/crmsfa/control/viewLead?partyId=10005'])[1]").getText();
+		
+		String LeadId = driver.findElementByXPath("(//div[@class='x-grid3-cell-inner x-grid3-col-partyId']/a)[1]").getText();
 		System.out.println(LeadId);
 		
-		driver.findElementByXPath("(//a[@href='/crmsfa/control/viewLead?partyId=10005'])[1]").click();
+		driver.findElementByXPath("(//div[@class='x-grid3-cell-inner x-grid3-col-partyId']/a)[1]").click();
 		
 		Thread.sleep(3000);
 		//Verify title of the page

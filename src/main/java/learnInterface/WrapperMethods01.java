@@ -7,6 +7,8 @@ public interface WrapperMethods01 {
 	
 	public void enterByName(String locator, String locatorValue);
 	
+	public void enterByLinkText(String locator, String locatorValue);
+	
 	public void enterByXpath(String locator, String locatorValue);
 	
 	public void enterByCssSelactor(String locator, String locatorValue);

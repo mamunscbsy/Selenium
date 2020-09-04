@@ -11,14 +11,26 @@ public class Car_MethodSignature {
 		
 		Car_MethodSignature obj = new Car_MethodSignature();
 		
-		obj.driving();
+		//Car_MethodSignature obj = new Car_MethodSignature();
+		
+	obj.driving();
+	obj.horn();
+	obj.CarBreak();
+	obj.miror();
+	obj.tipu();
+	obj.rumman();
+	obj.eat();
+	obj.java();
+	
+		
+		/*obj.driving();
 		obj.horn();
 		obj.CarBreak();
 		obj.mioor();
 		obj.tipu();
 		obj.rumman();
 		obj.eat();
-		obj.java();
+		obj.java();*/
 					
 		
 		//Through an error- we can'nt call non-static method inside static method
@@ -45,8 +57,8 @@ public class Car_MethodSignature {
 		System.out.println("Car has break");
 	}
 	
-	protected void mioor() {
-		System.out.println(" Car has mioor");
+	protected void miror() {
+		System.out.println("Car has mioor");
 	}
 	public void tipu() {
 		System.out.println("My name is Tipu");
@@ -60,5 +72,8 @@ public class Car_MethodSignature {
 	
 	protected void java() {
 		System.out.println("We ar learning Java");
+		
 	}
+	
+
 }

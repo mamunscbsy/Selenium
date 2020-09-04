@@ -21,7 +21,8 @@ public class DuplicateLead {
 
 		// Enter Username - (Element level)
 		driver.findElementById("username").sendKeys("DemoSalesManager");
-
+		//driver.findElementById("password").sendKeys("DemoSalesManager");
+		
 		// Enter Password - (Element level)
 		driver.findElementById("password").sendKeys("crmsfa");
 
@@ -41,10 +42,12 @@ public class DuplicateLead {
 		driver.findElementByXPath("//span[text()='Email']").click();
 
 		// enter email number
-		driver.findElementByXPath("//input[@name='emailAddress']").sendKeys("babu@testleaf.com");
+		driver.findElementByXPath("//input[@name='emailAddress']").sendKeys("hema@gmail.com");
+		
 
 		// click Find leads button
 		driver.findElementByXPath("//button[text()='Find Leads']").click();
+		
 
 		Thread.sleep(3000);
 		// Capture name of First Resulting lead

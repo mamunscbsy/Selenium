@@ -7,12 +7,13 @@ public class LearnList {
 
 	public static void main(String[] args) {
 		// Step 1:- Create object for List 
-		/*List<String> lst = new ArrayList<String>();
+		List<String> lst = new ArrayList<String>();
 				lst.add("xyz");
 				lst.add("yousuf");
 				lst.add("shihab");
 				lst.add("Mamun");
 
+				System.out.println(lst);
 				//get the count of list		
 				System.out.println(lst.size());	
 				
@@ -23,7 +24,7 @@ public class LearnList {
 				
 				System.out.println("...............................................");
 
-				//print all items inside the list		
+				/*//print all items inside the list		
 				for (int i = 0; i < lst.size(); i++) {
 					System.out.println(lst.get(i));
 				}
@@ -68,6 +69,7 @@ public class LearnList {
 		  lst1.add("Jewel"); 
 		  lst1.add("Shahnaz");
 		  lst1.add("Farah");
+		  
 		  
 		  //Get the count of the list System.out.println(lst.size());
 		  System.out.println("...............................................");

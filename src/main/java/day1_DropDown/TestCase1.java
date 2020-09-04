@@ -1,4 +1,4 @@
-package day1;
+package day1_DropDown;
 
 import org.testng.annotations.Test;
 
@@ -19,7 +19,7 @@ public class TestCase1 extends GenericWrapper01 {
 		//enterByClass("inputLogin","crmsfa"); //class locator is not working because of Username & password are same value 
 		//enterByXpath("//*[@id=\"password\"]","crmsfa");
 		clickByClassName("decorativeSubmit"); // click on Login element
-		enterByLinkText("CRM/SFA"); // click on CRM/SFA element
+		clickByLinkText("CRM/SFA"); // click on CRM/SFA element
 		//clickById("ext-gen603"); // click on 
 		clickByLinkText("Leads"); // click on Leads element
 		clickByLinkText("Find Leads");// question

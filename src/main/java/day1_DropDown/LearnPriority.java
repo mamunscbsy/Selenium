@@ -1,4 +1,4 @@
-package day1;
+package day1_DropDown;
 
 import org.testng.annotations.Test;
 

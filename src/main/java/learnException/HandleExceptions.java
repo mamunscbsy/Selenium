@@ -44,8 +44,20 @@ public class HandleExceptions {
 		driver.findElementByClassName("decorativeSubmit").click();
 
 		// click crm.sfa link
+		try {
 		driver.findElementByLinkText("CRM/SFA").click();
-
+		}
+		catch (NoSuchElementException e ) {
+			System.out.println("The element not found");
+			
+			Thread.sleep(2000);
+			
+			throw new RuntimeException();
+		}
+		finally { 
+			System.out.println("The element found");
+			}
+		
 		System.out.println("TestCase Completed");
 
 	}

@@ -42,7 +42,8 @@ public class MergeLead {
 
 		// Click on Icon near From Lead
 		driver.findElementByXPath("(//img[@alt='Lookup'])[1]").click();
-
+		
+		//Get first window reference
 		String firstWin = driver.getWindowHandle();
 
 		// Move to new window
@@ -57,12 +58,13 @@ public class MergeLead {
 		}
 
 		// Enter Lead ID
-		driver.findElementByXPath("//input[@type='text']").sendKeys("10034");
+		driver.findElementByXPath("//input[@type='text']").sendKeys("10070");
 
 		// click on Find Leads button
 		driver.findElementByXPath("//button[text()='Find Leads']").click();
 
 		Thread.sleep(3000);
+		
 		
 		// Click First Resulting lead
 		String elefirstName = driver.findElementByXPath("(//div[@class='x-grid3-cell-inner x-grid3-col-partyId']/a)[1]").getText();
@@ -86,7 +88,7 @@ public class MergeLead {
 		}
 
 		// Enter Lead ID
-		driver.findElementByXPath("(//input[@type='text'])[1]").sendKeys("10034");
+		driver.findElementByXPath("(//input[@type='text'])[1]").sendKeys("10071");
 
 		// click on Find Leads button
 		driver.findElementByXPath("//button[text()='Find Leads']").click();

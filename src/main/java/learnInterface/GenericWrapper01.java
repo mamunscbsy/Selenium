@@ -30,6 +30,10 @@ public class GenericWrapper01 implements WrapperMethods01 {
 	public void enterByName(String locator, String locatorValue) {
 		driver.findElementByName(locator).sendKeys(locatorValue);
 	}
+	
+	public void enterByLinkText(String locator, String locatorValue) {
+		driver.findElementByLinkText(locator).sendKeys(locatorValue);
+	}
 
 	public void enterByXpath(String locator, String locatorValue) {
 		driver.findElementByXPath(locator).sendKeys(locatorValue);
@@ -104,5 +108,10 @@ public class GenericWrapper01 implements WrapperMethods01 {
 		} else {
 			System.out.println("text is not matched");
 		}
+	}
+
+	public void login(String url) {
+		// TODO Auto-generated method stub
+		
 	}
 }

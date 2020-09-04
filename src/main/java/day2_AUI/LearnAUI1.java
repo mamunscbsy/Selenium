@@ -1,4 +1,4 @@
-package day2;
+package day2_AUI;
 
 import java.util.concurrent.TimeUnit;
 

@@ -2,7 +2,7 @@ package learnAbstraction;
 
 public class Rahim extends MobileUser{
 	
-	//Call(), sendMessage()
+	//both Call(), sendMessage(), methods internally comes here for inheritance concept]
 	
 	@Override
 	void sendMessage() {

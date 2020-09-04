@@ -8,6 +8,8 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.Select;
 
 
+
+
   
 public class LearnDropDown {
 
@@ -47,12 +49,17 @@ public class LearnDropDown {
 		//Select class for Dropdown (how to handle with dropdown)
 		
 		// 1. identify the dropdown element and pass to select class
-		
 		WebElement Source = driver.findElementById("createLeadForm_dataSourceId");
 		Select dd = new Select(Source);
+		//dd.selectByVisibleText("Employee");
+		//dd.selectByValue("LEAD_DIRECTMAIL");
+		dd.selectByIndex(5);
+		
+		//WebElement Source = driver.findElementById("createLeadForm_dataSourceId");
+		//Select dd = new Select(Source);
 		//dd.selectByVisibleText("Employee"); //using-way1
 		//dd.selectByValue("LEAD_CONFERENCE");//using-way2
-		dd.selectByIndex(3); //using-way3
+		//dd.selectByIndex(3); //using-way3
 		
 		WebElement mkt_cam = driver.findElementByName("marketingCampaignId");
 		Select dd1 = new Select(mkt_cam);

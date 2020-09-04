@@ -1,22 +1,19 @@
 package learnInterface;
 
-public class C implements A, B {
+public class C implements A,B{
 	//so we seen that here multiple inheritance possible 
 	//play
 	public void play() {
-		System.out.println("I am from C");
+		System.out.println("He is playing video game");
 	}
-
 	public void game() {
-		System.out.println("This is a game");
+		System.out.println("This is a interesting game");
 	}
-
 	public void football() {
-		System.out.println("This is a Football game");
+		System.out.println("Karim is playing Football");
 	}
-
 	public void chase() {
-		System.out.println("This is a Chase game");
+		System.out.println("He is playing Chase");
 	}
 	public void cricket() {
 		System.out.println("I like cricket");

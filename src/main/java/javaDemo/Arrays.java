@@ -39,17 +39,19 @@ String	z = "Yousuf";
 		//1. How to store the values into Arrays(Note: Two ways available)
 
 		// first way
-		String[] names = {"yousuf", "shihab", "abcd", "mamun"}; 		
+		//String[] names = {"yousuf", "shihab", "abcd", "mamun"}; 		
 		//int[] ph = {123, 456, 789, 1 ,2 ,3 ,4};		
 		//char[] ch1 = {'a', 'b', 'c', 'd'};
-		System.out.println(names[1]);
+		//System.out.println(names[2]);
 
-		// Second way		
+		//way-2		
 		//ClassName obj = new ClassName();
+		
+		//String[] names = new String[4];
 		String[] obj = new String[4];
-		obj[0] = "yousuf";
-		obj[1] = "shihab";
-		obj[2] = "Mamun";
+		obj[0] ="rayhan";
+		obj[1] = "tipu";
+		obj[2] = "mamun";
 		obj[3] = "xyz";
 		//obj[4] = "abc";
 		//System.out.println(4);
@@ -60,22 +62,22 @@ String	z = "Yousuf";
 
 
 		//3. how to get count of Array ---> array.lenght
-		System.out.println(obj.length);
+		//System.out.println(obj.length);
 
 
 		//4. how to Sort the Arrays ----> Arrays.sort()		
-		System.out.println(names[0]);		
+		//System.out.println(names[0]);		
 		//Arrays.sort(names[0]);		
-		System.out.println(names[1]);
+		//System.out.println(names[1]);
 
-		System.out.println("**********************************************************");
+		//System.out.println("**********************************************************");
 
 
 		//5. using for iterator, while loops and forEach		
 
-		for (int i= 0; i < obj.length; i++) {			
+		/*for (int i= 0; i < obj.length; i++) {			
 			System.out.println(obj[i]);
-		}
+		}*/
 
 		//String[] obj = new String[4];
 		//obj[0] = "yousuf";

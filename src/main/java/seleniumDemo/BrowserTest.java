@@ -3,11 +3,16 @@ package seleniumDemo;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.Test;
+
+
 
 public class BrowserTest {
 
-	public static void main(String[] args) throws InterruptedException {
+	//public static void main(String[] args) throws InterruptedException {
 
+	@Test
+	public void browserTest (){
 		//launch chrome browser
 		System.setProperty("webdriver.chrome.driver", "C:\\Users\\mamun\\Selenium\\Selenium\\Drivers\\chromedriver.exe");
 		
@@ -20,6 +25,8 @@ public class BrowserTest {
 		driver.manage().window().maximize();
 		
 		//Print Title of the page
+		
+		
 		 System.out.println(driver.getTitle());
 		 
 		 //Implicitly wait
@@ -39,7 +46,7 @@ public class BrowserTest {
 		 
 		 //close browser
 		// driver.close();
-		 Thread.sleep(5000);
+		 
 		
 
 		

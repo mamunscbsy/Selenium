@@ -15,40 +15,48 @@ System.setProperty("webdriver.chrome.driver", "C:\\Users\\mamun\\Selenium\\Selen
 		
 		WebDriver driver = new ChromeDriver();
 		
-		driver.get("https://www.w3schools.com/js/tryit.asp?filename=tryjs_prompt");
+		//driver.get("https://www.w3schools.com/js/tryit.asp?filename=tryjs_prompt");
+		
+		driver.get("https://the-internet.herokuapp.com/javascript_alerts");
+		System.out.println(driver.getTitle());
 						
 		driver.manage().window().maximize();
 		
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		
 		/*driver.get("https://the-internet.herokuapp.com/javascript_alerts");
-		System.out.println(driver.getTitle());
+		System.out.println(driver.getTitle());*/
 		
 		driver.findElement(By.xpath("//button[text()='Click for JS Prompt']")).click();
 		
+		/*driver.switchTo().frame("iframeResult");
+		
+		driver.findElement(By.xpath("//button[text()='Try it']")).click();*/
+		
 		Alert promptAlert = driver.switchTo().alert();
+		//promptAlert.getText();
 		System.out.println(promptAlert.getText());
 		Thread.sleep(3000);
-		promptAlert.sendKeys("Mamun");
+		promptAlert.sendKeys("I am Zahid Hussain");
 		Thread.sleep(3000);
 		promptAlert.accept();
 		Thread.sleep(3000);
-		System.out.println(driver.findElement(By.id("result")).getText());*/
+		System.out.println(driver.findElement(By.id("result")).getText());
 		
-		//driver.switchTo().frame("iframeResult");
-		driver.switchTo().frame("iframeResult");
+		
+		/*driver.switchTo().frame("iframeResult");
 		
 		driver.findElement(By.xpath("//button[text()='Try it']")).click();
 		
-		Alert promptAlert = driver.switchTo().alert();
-		Thread.sleep(3000);
-		System.out.println(promptAlert.getText());
-		promptAlert.sendKeys("Mamun");
-		Thread.sleep(3000);
-		promptAlert.accept();
-	
-		//promptAlert.dismiss();
-		System.out.println(driver.findElement(By.id("demo")).getText());
+		Alert alert = driver.switchTo().alert();
+		
+		Thread.sleep(2000);
+		alert.getText();
+		//alert.sendKeys("I am Atiqul Huda");
+		alert.sendKeys("I am Atia Sultana an Automation Engineer");
+		alert.accept();
+		//print the message
+		System.out.println(driver.findElement(By.id("demo")).getText());*/
 	
 		
 	}

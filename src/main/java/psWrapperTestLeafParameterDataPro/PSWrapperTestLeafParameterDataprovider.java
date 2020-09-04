@@ -1,7 +1,7 @@
 package psWrapperTestLeafParameterDataPro;
 
-import java.io.IOException; 
-
+import java.io.IOException;
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterMethod;
@@ -29,6 +29,9 @@ public class PSWrapperTestLeafParameterDataprovider {
 		
 	//maximize
 	driver.manage().window().maximize();
+	
+	//Implicit wait
+	driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 	
 	//load URL
 	driver.get("http://leaftaps.com/opentaps");

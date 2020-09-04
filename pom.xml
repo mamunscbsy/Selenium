@@ -5,6 +5,14 @@
 	<groupId>Selenium</groupId>
 	<artifactId>Selenium</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+	
+	<name>Selenium</name>
+  <url>http://maven.apache.org</url>
+
+	<properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+  
 	<dependencies>
 
 		<dependency>
@@ -25,18 +33,19 @@
 			<version>4.1.2</version>
 		</dependency>
 
-			<dependency>
+		<dependency>
 			<groupId>org.apache.poi</groupId>
 			<artifactId>poi-ooxml</artifactId>
 			<version>4.1.2</version>
 		</dependency>
 
-<dependency>
-    <groupId>io.github.bonigarcia</groupId>
-    <artifactId>webdrivermanager</artifactId>
-    <version>3.7.1</version>
-</dependency>
+		<dependency>
+			<groupId>io.github.bonigarcia</groupId>
+			<artifactId>webdrivermanager</artifactId>
+			<version>3.7.1</version>
+		</dependency>
 
-</dependencies>
+
+	</dependencies>
 
 </project>

@@ -61,7 +61,7 @@ public class CreateLead {
 		// enter firstName
 		
 		try {
-			driver.findElementByCssSelector("input#createLeadForm_firstName2").sendKeys("Gopi");
+			driver.findElementByCssSelector("input#createLeadForm_firstName").sendKeys("Gopi");
 		} catch (NoSuchElementException e) {
 			System.out.println("The element not found");
 		}

@@ -28,11 +28,11 @@ public class LearnFrameAlerts {
 		//String txt = "name";
 		
 		Thread.sleep(3000);
-		String text = driver.switchTo().alert().getText(); //for read the text from alert
-		System.out.println(text); // print the text in console
+		String text = driver.switchTo().alert().getText(); //for read/get the text from alert
+		System.out.println(text); // print the alert text in console
 		
 		//Thread.sleep(3000);
-		driver.switchTo().alert().accept(); // click ok button from alert
+		driver.switchTo().alert().accept(); // click ok button for accept the alert
 		
 		//driver.switchTo().alert().dismiss(); //// click cancel button from alert
 		

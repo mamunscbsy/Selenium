@@ -21,20 +21,35 @@ public class SimpleAlert {
 		
 		driver.findElementByXPath("(//input[@id='searchBtn'])[1]").click();
 		
-		/*Alert simple_alert = driver.switchTo().alert();
-		System.out.println(simple_alert.getText());
-		
-		Thread.sleep(3000);
-		simple_alert.accept();*/
-		
-		
-		String actual_msg = driver.switchTo().alert().getText();
-		//System.out.println(actual_msg);
-		
-		System.out.println("Alert message is: "+ actual_msg);
-		
-		Thread.sleep(3000);
+		String simpleAlert = driver.switchTo().alert().getText();
+		System.out.println(simpleAlert);
+	
 		driver.switchTo().alert().accept();
+		
+		driver.close();
+		
+		//System.out.println(getText());
+		
+		//Alert simple_alert = driver.switchTo().alert();
+		//System.out.println(simple_alert.getText());
+		
+		//Thread.sleep(3000);
+		//simpleAlert.accept();
+		
+		//String alertSms = driver.switchTo().alert().getText();
+		//String alertMessage = driver.switchTo().alert().getText();
+		
+		//System.out.println(alertMessage);
+		//System.out.println("Alert message is: "+ alertMessage);
+		
+		//Thread.sleep(2000);
+		//driver.switchTo().alert().accept();
+		
+		/*//String actual_msg = driver.switchTo().alert().getText();
+		//System.out.println(actual_msg);
+				
+		//Thread.sleep(3000);
+		//driver.switchTo().alert().accept();*/
 
 	}
 
