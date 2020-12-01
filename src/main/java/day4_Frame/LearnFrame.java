@@ -20,14 +20,15 @@ public class LearnFrame {
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		
 		//Switching to frame - way 1 //if your iframe has Id or name locator put the 'Value' directly
-		//driver.switchTo().frame("sidebar"); //for id or name Attribute only(put the id or name Attribute "value")
+		driver.switchTo().frame("sidebar"); //for id or name Attribute only(put the id or name Attribute "value")
 		
 		//Using index number- if your iframe has no Id or Name locator then go to Index number
 		
 		//Switching to frame - way 2
-		driver.switchTo().frame(0); // using index number - (Note: in java index starts from Zero[0])
+		//driver.switchTo().frame(0); // using index number - (Note: in java index starts from Zero[0])
 		
 		//WebElement- if there are multiple index then we go for WebElement
+		
 		//Switching to frame - way 3
 		//WebElement eleFrame = driver.findElementByClassName("demo-frame");
 		//driver.switchTo().frame(eleFrame);

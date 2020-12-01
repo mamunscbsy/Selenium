@@ -22,18 +22,21 @@ public class LearnAUI_MouseMovement {
 					
 		WebElement content = driver.findElementByClassName("menulink");
 		Actions action = new Actions(driver);
+		Thread.sleep(2000);
 		action.moveToElement(content).perform();
 			
 		
+		//click on Articles
+		Thread.sleep(3000);
+		driver.findElementByXPath("(//a[text()='Articles'])[1]").click();
 		
-		
+	//driver.close();
 		
 		//select Content and store it in a variable
 		/*WebElement ele = driver.findElementByXPath("//a[@class='menulink']");
 		Actions builder = new Actions(driver);
-		builder.moveToElement(ele).perform();
-		Thread.sleep(3000);
-		driver.findElementByXPath("(//a[text()='Articles'])[1]").click();*/
+		builder.moveToElement(ele).perform();*/
+		
 
 	}
 

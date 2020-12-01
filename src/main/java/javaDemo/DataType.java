@@ -22,7 +22,7 @@ public class DataType {
 		
 		float number = 9.55f;
 		double num3 = 10.10;
-		boolean objnum = true;
+		boolean z = true;
 	
 		//NonPrimitive Datatype (String, Arrays, Classes and Interfaces)
 		
@@ -32,13 +32,22 @@ public class DataType {
 		
 		//any thing print/display in console in Java
 				
+		System.out.println(name1);
+		System.out.println(name1);
+		System.out.println(name1);
+		System.out.println(name1);
+		
 		System.out.println(num0);
+		System.out.println(num0);
+		System.out.println(num0);
+		System.out.println(num0);
+		
 		System.out.println(rumman);
 		System.out.println(Rumman);
 		System.out.println(letter);
 		System.out.println(number);
 		System.out.println(num3);
-		System.out.println(objnum);
+		System.out.println(z);
 		System.out.println(name);
 	}
 	

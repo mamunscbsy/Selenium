@@ -5,13 +5,13 @@ public class StringConcept {
 	public static void main(String[] args) {
 
 		//way-1 String Literal
-		//String text = "String Concept";
-		//String text1 = "String Concept";
+		String text = "String Concept"; //123456
+		String text1 = "String Concept"; //123456
 		
 		//way-2 using String Object
 		//String txt1 = new String("String Concept");
 		
-		/*System.out.println(System.identityHashCode(text));
+		System.out.println(System.identityHashCode(text));
 		System.out.println(System.identityHashCode(text1));
 		
 		System.out.println(text);
@@ -20,15 +20,17 @@ public class StringConcept {
 		//String class Method
 		//1. equals -return true or false
 		System.out.println(text.equals(text1));
+		System.out.println(text.equals(text1));
+		
 		
 		//System.out.println(text.equals(text1)); // equals function compare the value of two different variable(text n text1)
 		System.out.println(text == text1); //compares memory address of String variable
 		
 		System.out.println(System.identityHashCode(text));
-		System.out.println(System.identityHashCode(text1));*/
+		System.out.println(System.identityHashCode(text1));
 		
 		//2. Length()- return count of String
-		String text = "String Concept  ";
+		/*String text = "String Concept  ";
 		String text2 = "Learning String";
 		System.out.println(text.length());
 		
@@ -86,11 +88,14 @@ public class StringConcept {
 			
 			//endsWith() -given String ends with particular Character/collection of char or not -return true/false 
 			System.out.println(text5.endsWith("s"));
-			System.out.println(text5.endsWith("ing"));
+			System.out.println(text5.endsWith("ing"));*/
 			
 			//contains() -given String is available in entire String or not - return true/false
+			String text5 = "Compares String";
+			
 			System.out.println(text5.contains("mpa"));
 			System.out.println(text5.contains("tex"));
+			System.out.println(text5.contains("Com"));
 			
 			
 			

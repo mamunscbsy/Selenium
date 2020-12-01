@@ -29,7 +29,7 @@ String	z = "Yousuf";
 
 		//NonPrimitive Datatype (String, Arrays, Classes and Interfaces)
 		
-	String txt = "yousuf";
+	//String txt = "yousuf";
 
 
 
@@ -39,30 +39,36 @@ String	z = "Yousuf";
 		//1. How to store the values into Arrays(Note: Two ways available)
 
 		// first way
-		//String[] names = {"yousuf", "shihab", "abcd", "mamun"}; 		
-		//int[] ph = {123, 456, 789, 1 ,2 ,3 ,4};		
-		//char[] ch1 = {'a', 'b', 'c', 'd'};
-		//System.out.println(names[2]);
-
+		String[] names = {"Tasnim", "Basith", "abcd", "Khadija"}; 		
+		int[] ph = {123, 456, 789, 1 ,2 ,3 ,4};		
+		char[] ch1 = {'a', 'b', 'c', 'd'};
+	
+		System.out.println(names[3]);
+		
+		System.out.println(ch1[2]);
 		//way-2		
 		//ClassName obj = new ClassName();
 		
 		//String[] names = new String[4];
-		String[] obj = new String[4];
-		obj[0] ="rayhan";
-		obj[1] = "tipu";
-		obj[2] = "mamun";
+	
+		System.out.println("...................................");
+	String[] obj = new String[4];
+		obj[0] ="dinnar";
+		obj[1] = "lovely";
+		obj[2] = "Anwar";
 		obj[3] = "xyz";
 		//obj[4] = "abc";
-		//System.out.println(4);
+	//	obj[5] ="xyz";
+		
+		//System.out.println(5);
 
 
 		//2. How to pick value from Array ---> array[indexNumber]		
-		System.out.println(obj[1]);
+		System.out.println(obj[3]);
 
 
 		//3. how to get count of Array ---> array.lenght
-		//System.out.println(obj.length);
+		System.out.println(obj.length);
 
 
 		//4. how to Sort the Arrays ----> Arrays.sort()		
@@ -75,15 +81,15 @@ String	z = "Yousuf";
 
 		//5. using for iterator, while loops and forEach		
 
-		/*for (int i= 0; i < obj.length; i++) {			
+		for (int i= 0; i <obj.length; i++) {			
 			System.out.println(obj[i]);
-		}*/
+		}
 
 		//String[] obj = new String[4];
 		//obj[0] = "yousuf";
-		//obj[1] = "shihab";
-		//obj[2] = "Mamun";
-		//obj[3] = "xyz";	
+		//obj[1] = "emon";
+		//obj[2] = "dinner";
+		//obj[3] = "Parsa";	
 
 		System.out.println("-------------------------------------------------------------");
 
@@ -110,6 +116,10 @@ String	z = "Yousuf";
 
 
 	}
+
+	
+		
 	}
+
 
 

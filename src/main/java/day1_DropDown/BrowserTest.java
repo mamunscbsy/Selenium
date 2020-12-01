@@ -21,8 +21,6 @@ public class BrowserTest {
 		//Maximize window
 		driver.manage().window().maximize();
 		
-		driver.manage().window().maximize();
-		
 		//Print Title of the page
 		//driver.getTitle();
 		System.out.println(driver.getTitle());

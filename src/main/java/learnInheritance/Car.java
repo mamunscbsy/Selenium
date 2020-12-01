@@ -3,9 +3,10 @@ package learnInheritance;
 public class Car extends Vehicle { // this is called single level inheritance
 	
 		
-	public void turnAC() {
+	public void autoPilot() {
 		
-		System.out.println("Turn AC"); 
+		System.out.println("Auto Pilot"); 
+		System.out.println("I am Mamun");
 	}
 	
 

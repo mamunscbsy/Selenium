@@ -14,8 +14,9 @@ public class DoWhileLoop {
 		do {
 			System.out.println(i);
 			i++;
-		}while(i<=50);
-
+		}while(i<=20);
+		
 	}
-
+	
 }
+

@@ -21,12 +21,27 @@ public class SimpleAlert {
 		
 		driver.findElementByXPath("(//input[@id='searchBtn'])[1]").click();
 		
-		String simpleAlert = driver.switchTo().alert().getText();
+		//Way-1
+		String simpleAlertTxt = driver.switchTo().alert().getText();
+		System.out.println(simpleAlertTxt);
+		
+		driver.switchTo().alert().accept();
+		
+		//By using Alert class-Way-2
+		/*Alert simpleAlert = driver.switchTo().alert();
+		System.out.println(simpleAlert.getText());
+		
+		simpleAlert.accept();*/
+			
+		//Close browser
+		driver.close();
+		
+		/*String simpleAlert = driver.switchTo().alert().getText();
 		System.out.println(simpleAlert);
 	
 		driver.switchTo().alert().accept();
 		
-		driver.close();
+		driver.close();*/
 		
 		//System.out.println(getText());
 		

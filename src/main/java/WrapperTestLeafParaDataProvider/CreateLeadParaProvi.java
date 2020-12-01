@@ -18,7 +18,7 @@ public class CreateLeadParaProvi extends PSWrapperTestLeafParameterDataprovider{
 	driver.findElementByLinkText("Create Lead").click();
 	
 	//company name
-	driver.findElementById("createLeadForm_companyName").sendKeys("TCS");
+	driver.findElementById("createLeadForm_companyName").sendKeys("TCS"); 
 	
 	//enter firstName
 	driver.findElementByCssSelector("input#createLeadForm_firstName").sendKeys("Gopi");

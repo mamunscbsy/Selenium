@@ -33,16 +33,33 @@ System.setProperty("webdriver.chrome.driver", "C:\\Users\\mamun\\Selenium\\Selen
 		
 		driver.findElement(By.xpath("//button[text()='Try it']")).click();*/
 		
-		Alert promptAlert = driver.switchTo().alert();
+		//way-1
+		String promptAlert = driver.switchTo().alert().getText();
+		System.out.println(promptAlert);
+		 Thread.sleep(3000);
+		driver.switchTo().alert().sendKeys("Hi I am Tasnim");
+		driver.switchTo().alert().accept();
+		
+		//way-2
+		/*Alert promptAlert = driver.switchTo().alert();
 		//promptAlert.getText();
 		System.out.println(promptAlert.getText());
+		
 		Thread.sleep(3000);
-		promptAlert.sendKeys("I am Zahid Hussain");
+		
+		promptAlert.sendKeys("I am Anwar Hoque");
+	
+		
 		Thread.sleep(3000);
-		promptAlert.accept();
+		promptAlert.accept()
+		promptAlert.dismiss;*/
+		
 		Thread.sleep(3000);
 		System.out.println(driver.findElement(By.id("result")).getText());
 		
+		Thread.sleep(3000);
+		//close browser
+		driver.close();
 		
 		/*driver.switchTo().frame("iframeResult");
 		

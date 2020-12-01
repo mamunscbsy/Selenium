@@ -38,16 +38,23 @@ public class ConfirmationAlert {
 
 		driver.findElementByXPath("//a[text()='Merge']").click();
 
-		//switching to alert and capturing alert message
-				
-		Alert confirmationAlert = driver.switchTo().alert();
-		System.out.println(confirmationAlert.getText());
-		//Alert ConfirmationAlert = driver.switchTo().alert();
-		//System.out.println(ConfirmationAlert.getText());
+		//switching to alert and capturing alert message/text
+		//way-1
+		String ConfirmationAlert = driver.switchTo().alert().getText();
+		System.out.println(ConfirmationAlert);
 		
 		Thread.sleep(3000);
-		confirmationAlert.dismiss();
-		//confirmationAlert.accept();
+		driver.switchTo().alert().accept();
+		
+		//way-2
+		/*Alert confirmationAlert = driver.switchTo().alert();
+		System.out.println(confirmationAlert.getText());
+		
+		Thread.sleep(3000);
+		
+		confirmationAlert.accept();
+		//confirmationAlert.dismiss();	*/
+		
 
 		
 		/*String alertMessage = driver.switchTo().alert().getText();

@@ -4,21 +4,22 @@ public class Test {
 	
 	public static void main(String[] args) {
 		
-		//we can't create object of Abstract class; but we can create reference variable of abstract class
+		//we can't create object of Abstract class; but we can create reference variable of abstract class/super class
 		
 		//MobileUser mu = new MobileUser();
 		
 		MobileUser mu; //reference variable of super class
 		
 		mu= new Rahim();
-		mu.call();
+		//mu.call();
 		mu.sendMessage();
 		
 		mu= new Karim();
-		mu.call();
+		//mu.call();
 		mu.sendMessage();
 		
 		
 	}
 
 }
+

@@ -13,7 +13,7 @@ public class ReadExcel {
 		
 		
 		// Open Workbook
-		XSSFWorkbook wb = new XSSFWorkbook("./data/ReadData.xlsx");
+		XSSFWorkbook wb = new XSSFWorkbook("./data/ExcelFile.xlsx");
 		
 		// Get Sheet
 		XSSFSheet sheet = wb.getSheet("MM");
@@ -29,12 +29,12 @@ public class ReadExcel {
 				
 		//open "for loop" for rows
 		for (int i = 1; i <= rowCount; i++) {
-			// Row
+			// Get Row
 			XSSFRow row = sheet.getRow(i);
 			
 			//open "for loop" for  columns
 			for (int j = 0; j < columnCount; j++) {
-				//Column
+				//Get Column
 				XSSFCell cell = row.getCell(j);
 				
 				//Action -> Read Value

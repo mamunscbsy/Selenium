@@ -6,13 +6,13 @@
   <parameter name="url" value="http://leaftaps.com/opentaps"/>
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="testCasesTestLeaf.CreateLead01">
+      <class name="WrapperTestLeafParaDataProvider.CreateLeadParaProvi">
         <methods>
           <include name="login"/>
           <include name="createLead01"/>
           <include name="closeBrowser"/>
         </methods>
-      </class> <!-- testCasesTestLeaf.CreateLead01 -->
+      </class> <!-- WrapperTestLeafParaDataProvider.CreateLeadParaProvi -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

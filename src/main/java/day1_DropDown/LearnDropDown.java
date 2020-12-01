@@ -6,6 +6,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.Select;
 
+
 public class LearnDropDown {
 	
 public static void main(String[] args) {
@@ -44,11 +45,25 @@ public static void main(String[] args) {
 		
 		// 1. identify the dropdown element and pass to select class
 		
-		WebElement Source = driver.findElementById("createLeadForm_dataSourceId");
+		WebElement source = driver.findElementById("createLeadForm_dataSourceId");
+		Select dd = new Select(source);
+		dd.selectByVisibleText("Website");
+		
+		WebElement mktCamaign = driver.findElementByXPath("//select[@id='createLeadForm_marketingCampaignId']");
+		Select dd1 = new Select(mktCamaign);
+		dd1.selectByValue("DEMO_MKTG_CAMP");
+		
+		WebElement Ind = driver.findElementByXPath("(//select[@class='inputBox'])[4]");
+		Select dd2 = new Select(Ind);
+		dd2.selectByIndex(7);
+		
+		
+		
+		/*8WebElement Source = driver.findElementById("createLeadForm_dataSourceId");
 		Select dd = new Select(Source);
-		//dd.selectByVisibleText("Employee"); //use-way1
+		dd.selectByVisibleText("Employee"); //use-way1
 		//dd.selectByValue("LEAD_CONFERENCE");//use-way2
-		dd.selectByIndex(3);
+		//dd.selectByIndex(3);	//use-way3*/
 		
 		
 		

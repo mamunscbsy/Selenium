@@ -4,13 +4,18 @@ public class IfElse {
 
 	public static void main(String[] args) {
 
-		//if
+		//1. if
 		
-	/*	if (20 < 18) {
-			System.out.println("20 is greater tahn 18"); // obviously
+		
+		if(50<40) {
+			System.out.println("50 is grater than 40");
 		}
 		
-		System.out.println("..................................................");*/
+		if (30 > 25) {
+			System.out.println("30 is greater than 25"); // obviously
+		}
+		
+		System.out.println("..................................................");
 
 		int x = 20;
 		int y = 18;
@@ -19,13 +24,16 @@ public class IfElse {
 			System.out.println("x is greater than y");
 		}
 
-		//System.out.println("........................................");
+		System.out.println(".........................................");
+		System.out.println("........................................");
 		
-		//if else// 20 > 18 > - greater than
+		//2. if else
+		
+		// 20 > 18 > - greater than
 	     // 18<20  < - less than
 		
 		
-		if (x < y) {
+		if (x > y) {
 			System.out.println("x is greater than y");
 
 		} else {

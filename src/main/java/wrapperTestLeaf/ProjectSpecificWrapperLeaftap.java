@@ -3,14 +3,13 @@
 		import org.openqa.selenium.chrome.ChromeDriver;
 		import org.testng.annotations.AfterMethod;
 		import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Parameters;
+		import org.testng.annotations.Parameters;
 
 		public class ProjectSpecificWrapperLeaftap {
 	
 		public ChromeDriver driver;
-		
-		
-		@Parameters({"url","uname","pwd"})
+				
+		@Parameters({"url","uname","pwd"}) 
 		@BeforeMethod
 		public void login(String url, String uname, String pwd) {
 		
@@ -24,19 +23,19 @@ import org.testng.annotations.Parameters;
 		//load URL
 		driver.get("url");
 		
-		//Enter Username - (Element level)
+		//Enter Username 
 		driver.findElementById("username").sendKeys("uname");
 						
-		//Enter Password - (Element level)
+		//Enter Password
 		driver.findElementById("password").sendKeys("pwd");
 		
-		// Click Login Button - (Element level)
+		// Click Login Button
 		driver.findElementByClassName("decorativeSubmit").click();
 		
 		// click crm.sfa link
 		driver.findElementByLinkText("CRM/SFA").click();
 		}
-	
+		
 		@AfterMethod
 		public void closeBrowser() {
 		driver.close();

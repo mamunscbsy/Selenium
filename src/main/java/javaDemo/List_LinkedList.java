@@ -18,6 +18,10 @@ public class List_LinkedList {
 		
 		System.out.println(emp.size());
 		
+		for (int i = 0; i <emp.size(); i++) {
+			System.out.println(emp.get(i));
+			}
+		
 		for (String eachEmp : emp) {
 			System.out.println(eachEmp);
 			

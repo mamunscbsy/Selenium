@@ -25,13 +25,10 @@ public class HandleExceptions {
 		try {
 			driver.findElement(By.id("username")).sendKeys("DemoSalesManager");
 		}
-
-		catch (NoSuchElementException e ) {
-			System.out.println("The element not found");
+		
+		catch(NoSuchElementException e) {
+			System.out.println("Usenname element not found");
 			
-			Thread.sleep(2000);
-			
-			throw new RuntimeException();
 		}
 
 		finally { System.out.println("The element found");

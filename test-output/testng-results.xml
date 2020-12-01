@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="55600" started-at="2020-08-17T00:56:35 CDT" finished-at="2020-08-17T00:57:30 CDT">
+  <suite name="Default suite" duration-ms="12028" started-at="2020-11-06T21:56:55 CST" finished-at="2020-11-06T21:57:07 CST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="55600" started-at="2020-08-17T00:56:35 CDT" finished-at="2020-08-17T00:57:30 CDT">
-      <class name="learnInterface.TC001_Login">
-        <test-method status="PASS" signature="login()[pri:0, instance:learnInterface.TC001_Login@50b494a6]" name="login" duration-ms="55473" started-at="2020-08-17T00:56:35 CDT" finished-at="2020-08-17T00:57:30 CDT">
+    <test name="Default test" duration-ms="12028" started-at="2020-11-06T21:56:55 CST" finished-at="2020-11-06T21:57:07 CST">
+      <class name="miscellaneousTopic.Assertion">
+        <test-method status="PASS" signature="assertEquals()[pri:0, instance:miscellaneousTopic.Assertion@6ebc05a6]" name="assertEquals" duration-ms="11922" started-at="2020-11-06T21:56:55 CST" finished-at="2020-11-06T21:57:07 CST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- login -->
-      </class> <!-- learnInterface.TC001_Login -->
+        </test-method> <!-- assertEquals -->
+      </class> <!-- miscellaneousTopic.Assertion -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

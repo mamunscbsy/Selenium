@@ -1,5 +1,6 @@
 package learnTestNG;
 
+
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
@@ -26,30 +27,32 @@ public class TestNGAnnotations {
 		System.out.println("beforeClass");
 	}
 	
-	@BeforeMethod
-	public void beforeMethod() {
-		System.out.println("beforeMethod");
+	
+	@AfterMethod
+	public void afterMethod() {
+		System.out.println("afterMethod");
 	}
 	
-	@Test
+	
+	@Test(priority=1)
 	public void test1() {
 		System.out.println("Execute test1");
 	}
 
-	@Test
+	@Test(priority=0)
 	public void test2() {
 		System.out.println("Execute test2");
 		
 	}
 	
-	@Test
+	@Test(priority=2)
 	public void test3() {
 		System.out.println("Execute test3");
 	}
 	
-	@AfterMethod
-	public void afterMethod() {
-		System.out.println("afterMethod");
+	@BeforeMethod
+	public void beforeMethod() {
+		System.out.println("beforeMethod");
 	}
 	
 	@AfterClass

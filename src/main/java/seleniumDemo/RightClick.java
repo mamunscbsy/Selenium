@@ -25,6 +25,8 @@ public class RightClick {
 		action.contextClick(rightclick).perform();
 		
 		//action.contextClick(rightclick).perform();
+		
+		//driver.close();
 
 	}
 

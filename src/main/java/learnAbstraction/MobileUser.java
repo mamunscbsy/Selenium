@@ -1,9 +1,10 @@
 package learnAbstraction;
 
-//its a fully abstract class, it has no abstract method
-public abstract class MobileUser {
 
-	void call() { 						// this is a non abstract method, it has implementation
+
+public abstract class MobileUser { //its a fully abstract class, it has no abstract method
+
+	void call() { 		// this is a non abstract method, it has implementation
 		System.out.println("This is Call method");
 	}
 

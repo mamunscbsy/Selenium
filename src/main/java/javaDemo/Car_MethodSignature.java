@@ -4,47 +4,37 @@ public class Car_MethodSignature {
 
 	public static void main(String[] args) {
 		
-		
+		//A method have 4 things
+		//public- Access Modifier
+		//void- return type
+		//driving()- Method name
+		//Method body- { System.out.println("I am Driving");}
 		
 		//Syntax of object creation
 		// className obj = new calssName();
 		
-		Car_MethodSignature obj = new Car_MethodSignature();
+		//Car_MethodSignature obj = new Car_MethodSignature();
 		
 		//Car_MethodSignature obj = new Car_MethodSignature();
 		
-	obj.driving();
+		
+		
+	/*obj.driving();
 	obj.horn();
 	obj.CarBreak();
 	obj.miror();
 	obj.tipu();
 	obj.rumman();
 	obj.eat();
-	obj.java();
-	
-		
-		/*obj.driving();
-		obj.horn();
-		obj.CarBreak();
-		obj.mioor();
-		obj.tipu();
-		obj.rumman();
-		obj.eat();
-		obj.java();*/
-					
-		
+	obj.java();*/
+			
 		//Through an error- we can'nt call non-static method inside static method
 		//driving();
 
 	}
 	
-	//A method have 4 things
-	//public- Access Modifier
-	//void- return type
-	//driving()- Method name
-	//Method body- { System.out.println("I am Driving");}
-	
-	public void driving() {
+		
+	public static void driving() {
 		
 		System.out.println("I am Driving"); //method Body
 	}
@@ -74,6 +64,9 @@ public class Car_MethodSignature {
 		System.out.println("We ar learning Java");
 		
 	}
-	
+	public int addNumbers(int A, int B) {
+		return A+B;
+		
+	}
 
 }

@@ -21,32 +21,32 @@ public class WindowHandles {
 		
 		driver.findElementByPartialLinkText("Try it Yourself »").click();
 
+		//1. method one- getWindowHandle()
 		//String currentWindow = driver.getWindowHandle();
 		//System.out.println(currentWindow);
-
-		Set<String> allWin = driver.getWindowHandles();
 		
-		//Set<String> allWin = driver.getWindowHandles(); 
-		// Set<String> allWin = driver.getWindowHandles();
-		//System.out.println(allWin);
+		//2. method two- getWindowHandles()
+		
+		Set<String> allWinRef = driver.getWindowHandles();
+		//System.out.println(allWinRef);
 
-		for (String eachWin : allWin) {
+		for (String eachWin : allWinRef) {
 			
 			System.out.println(eachWin);
 			
 			driver.switchTo().window(eachWin);
 			
-			//System.out.println(driver.getTitle());
+			System.out.println(driver.getTitle());
 			
 		}
 
-		// System.out.println(driver.getTitle());
+		
+		/*driver.switchTo().frame("iframeResult");
 
-		//driver.switchTo().frame("iframeResult");
+		driver.findElementByXPath("//button[text()='Try it']").click();
 
-		//driver.findElementByXPath("//button[text()='Try it']").click();
-
-		// driver.close(); // closing the child/new window
+		 driver.close(); // closing the child/new window
+		 //driver.quit(); //close all windows opened by this session*/
 
 		/*
 		 * driver.get("https://www.irctc.co.in");

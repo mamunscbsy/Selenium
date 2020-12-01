@@ -1,4 +1,4 @@
-package learnTestNG;
+package seleniumDemo;
 
 import java.util.concurrent.TimeUnit;
 
@@ -9,22 +9,25 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class CreateLead {
+public class CreateLeadExplicitlyWait {
 
 	@Test
-	public void creatLead() throws InterruptedException {
+	public void creatLead() throws InterruptedException{
 
 		System.setProperty("webdriver.chrome.driver",
 				"C:\\Users\\mamun\\Selenium\\Selenium\\drivers\\chromedriver.exe");
 		// WebDriverManager.firefoxdriver().setup();
 	
 		ChromeDriver driver = new ChromeDriver();
-
+		
 		// maximize
 		driver.manage().window().maximize();
 		
@@ -61,26 +64,30 @@ public class CreateLead {
 		// enter firstName
 		
 		try {
-			driver.findElementByCssSelector("input#createLeadForm_firstName").sendKeys("Gopi");
+			driver.findElementByCssSelector("input#createLeadForm_firstName").sendKeys("Hema");
 		} catch (NoSuchElementException e) {
 			System.out.println("The element not found");
 		}
-		Thread.sleep(2000);
-		// throw new RuntimeException();
-
+		
 		// enter lastName
-		driver.findElementByCssSelector("#createLeadForm_lastName").sendKeys("J");
-		// driver.findElementById("createLeadForm_lastName").sendKeys("J");
+		//ExplicitlyWait
+		//Thread.sleep(2000);
+	
+		WebDriverWait wait = new WebDriverWait(driver, 10);
+		wait.until(ExpectedConditions.elementToBeClickable(By.id("createLeadForm_lastName")));
+		
+		//driver.findElementByCssSelector("#createLeadForm_lastName").sendKeys("Ma");
+		driver.findElementById("createLeadForm_lastName").sendKeys("Ma");
 
 		// enter firstName local
-		driver.findElementByCssSelector("input#createLeadForm_firstNameLocal").sendKeys("Gopi");
-		// driver.findElementByXPath("//input[@id='createLeadForm_firstNameLocal']").sendKeys("Gopi");
+		driver.findElementByCssSelector("input#createLeadForm_firstNameLocal").sendKeys("Hema");
+		// driver.findElementByXPath("//input[@id='createLeadForm_firstNameLocal']").sendKeys("Hema");
 
 		// enter lastName local
-		driver.findElementByXPath("//input[@id='createLeadForm_lastNameLocal']").sendKeys("Jayakumar");
+		driver.findElementByXPath("//input[@id='createLeadForm_lastNameLocal']").sendKeys("Ma");
 
 		// enter salutation
-		driver.findElementByXPath("//input[@name='personalTitle']").sendKeys("Mr.");
+		driver.findElementByXPath("//input[@name='personalTitle']").sendKeys("Mrs.");
 
 		// Choose source
 		WebElement src = driver.findElementById("createLeadForm_dataSourceId");
@@ -88,7 +95,7 @@ public class CreateLead {
 		dd.selectByVisibleText("Website");
 
 		// enter Title
-		driver.findElementByXPath("//input[@name='generalProfTitle']").sendKeys("Mr.");
+		driver.findElementByXPath("//input[@name='generalProfTitle']").sendKeys("Mrs.");
 
 		// enter Annual revenue
 		driver.findElementByXPath("//input[@name='annualRevenue']").sendKeys("1000");
@@ -142,18 +149,18 @@ public class CreateLead {
 		driver.findElementByXPath("//input[@name='tickerSymbol']").sendKeys("Tk");
 
 		// Enter Person to Ask For
-		driver.findElementByXPath("//input[@name='primaryPhoneAskForName']").sendKeys("Gopi");
+		driver.findElementByXPath("//input[@name='primaryPhoneAskForName']").sendKeys("Hema");
 
 		// Enter Web Url
 		driver.findElementByXPath("//input[@name='primaryWebUrl']").sendKeys("www.google.com");
 
 		// Enter To Name
-		driver.findElementByXPath("//input[@name='generalToName']").sendKeys("Gnath");
+		driver.findElementByXPath("//input[@name='generalToName']").sendKeys("Ravi");
 
 		// Enter Address Line 1 and 2
 		driver.findElementByXPath("//input[@name='generalAddress1']").sendKeys("8821 Saddlehorn Dr");
 		// address line 2
-		driver.findElementByXPath("//input[@name='generalAddress2']").sendKeys("APT 252");
+		driver.findElementByXPath("//input[@name='generalAddress2']").sendKeys("APT 152");
 
 		// Enter City
 		driver.findElementByXPath("//input[@id='createLeadForm_generalCity']").sendKeys("DAL");
@@ -193,14 +200,21 @@ public class CreateLead {
 
 		String firstName = driver.findElementById("viewLead_firstName_sp").getText();
 		System.out.println(firstName);
+		
+		Assert.assertEquals(firstName, "Hema"," Varify FirstName");
+		
+					
+		driver.close();
+	
+		//System.out.println("Element not found");
 
-		System.out.println("Element not found");
-
-		if (firstName.equals("Gopi")) {
+		/*if (firstName.equals("Hema")) {
 			System.out.println("Name is Matched");
 		} else {
 			System.out.println("Not Match");
-		}
+		}*/
+		
+		
 
 	}
 }

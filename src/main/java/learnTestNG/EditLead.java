@@ -10,11 +10,14 @@ import org.testng.annotations.Test;
 
 public class EditLead {
 	
-	@Test
-	public void editLead() throws InterruptedException {
+	//@Test
+	public static void main(String[] args) {
 		
 	
-		System.setProperty("webdriver.chrome.driver","./Drivers/chromedriver.exe");
+	//public void editLead() throws InterruptedException {
+		
+	
+		System.setProperty("webdriver.chrome.driver","C:\\Users\\mamun\\Selenium\\Selenium\\drivers\\chromedriver.exe");
 		ChromeDriver driver = new ChromeDriver();
 		
 		//maximize
@@ -44,7 +47,7 @@ public class EditLead {
 		driver.findElementByLinkText("Find Leads").click();
 		
 		//Enter first name
-		driver.findElementByXPath("(//input[@name='firstName'])[3]").sendKeys("Gopi");
+		/*driver.findElementByXPath("(//input[@name='firstName'])[3]").sendKeys("Gopi");
 		
 		//click Find lead button
 		driver.findElementByXPath("//button[text()='Find Leads']").click();
@@ -55,8 +58,10 @@ public class EditLead {
 		//WebDriverWait wait = new WebDriverWait(driver, 20);
 		//wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//div[@class='x-grid3-cell-inner x-grid3-col-partyId']/a)[1]")));
 			
-		Thread.sleep(2000);
+		//Thread.sleep(2000);
 		//click on first resulting lead
+		WebDriverWait wait = new WebDriverWait(driver, 10);
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//div[@class='x-grid3-cell-inner x-grid3-col-partyId']/a)[1]")));
 		
 		String LeadId = driver.findElementByXPath("(//div[@class='x-grid3-cell-inner x-grid3-col-partyId']/a)[1]").getText();
 		System.out.println(LeadId);
@@ -91,9 +96,9 @@ public class EditLead {
 		  
 		  } else {
 		 System.out.println("Not matched");
-		 }
+		 }*/
 						
-		//Close the browser (Do not log out)
+		//Close the browser
 		driver.close();
 		
 	}
